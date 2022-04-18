@@ -1,27 +1,50 @@
 # Repofinder
+#### Welcome to Repofinder. Finding github profiles and repositories has never been easier.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
+### By Kevin Malomba  
+---
+#### Repofinder enables users to search and find github users and their repositories.
+-------
 
-## Development server
+## Table of Content
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
++ [Description](#description)
++ [Access](#Access)
++ [Requirements](#requirements)
++ [Technology Used](#Technology-Used)
++ [Authors Info](#Authors-Info)
 
-## Code scaffolding
+### Repofinder site link
++ [www.repofinder.com]()
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Description
++ Repofinder is a web application that enables user to find github accounts and view their available repositories. Users can choose either to search for Github users or repositories. Github is a provider of Internet hosting for software development and thus it helps developers backup their codes, host their sites and also collaborate in projects. Repofinder serves to provide efficient way to find users and their repositories.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Access
 
-## Running unit tests
+### Requirements
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* A computer, a mobile phone, a tablet, a smart/ android television
 
-## Running end-to-end tests
+* An access to the Internet
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Technology Used
+* Angular : A framework for building single-page client applications using HTML and TypeScript.
+* Github Application Program Interface: Enables repofinder site to fetch data from github.
+
+## Authors Info 
+
+#### LinkedIn Profile 
+[kevin-malomba](https://ke.linkedin.com/in/kevin-malomba-44ba731a3?trk=people-guest_people_search-card)
+
+#### Twitter Profile
+[kmalomba](https://twitter.com/kmalomba)
+
+[Go Back to the top](#Repofinder)
+
+
+
+
