@@ -11,9 +11,7 @@ input{
 }
 button{
     border:none;
-    /* background-color:blue; */
     border-radius: 5rem;
-    /* color:white; */
     padding:0.3rem;
     width:10%;
 }
