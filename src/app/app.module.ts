@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { RepositoryFinderComponent } from './repository-finder/repository-finder.component';
 import { ProfilesFinderComponent } from './profiles-finder/profiles-finder.component';
+import { NavBarGithubComponent } from './nav-bar-github/nav-bar-github.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ProfilesFinderComponent } from './profiles-finder/profiles-finder.compo
     HomeComponent,
     NavigationBarComponent,
     RepositoryFinderComponent,
-    ProfilesFinderComponent
+    ProfilesFinderComponent,
+    NavBarGithubComponent
   ],
   imports: [
     BrowserModule,
