@@ -17,7 +17,6 @@ import { ProfilesFinderComponent } from './profiles-finder/profiles-finder.compo
     NavigationBarComponent,
     RepositoryFinderComponent,
     ProfilesFinderComponent,
-    // NavBarGithubComponent
   ],
   imports: [
     BrowserModule,

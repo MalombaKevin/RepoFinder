@@ -2,14 +2,12 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Profiles } from '../profiles';
-import { Repo } from '../repos';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RepoUserService {
-  profile!:Profiles;
-  anyRepo!: Repo[];
+  profile!:Profiles
 
   constructor(private http:HttpClient) { }
 
@@ -38,34 +36,4 @@ export class RepoUserService {
     })
     return promise
   } 
-  getAnyRepo(name: string) {
-    console.log(`${environment.base_repo_url}${name}`)
-    const promise = new Promise<void>((resolve, reject) => {
-      this.http
-        //  this.http.get().subscribe({next:()=>{},error:()=>{}})
-        .get<Repo[]>(`${environment.base_repo_url}${name}`, {
-          headers: {
-            Authorization: `token ${environment.access_token}`,
-          },
-        })
-        .subscribe({
-          next: (res:any) => {
-            this.anyRepo = res.items
-            console.log("result---- in service",res)
-            resolve();
-          },
-          error: (error) => {
-            console.log(error);
-            reject();
-          },
-          complete: () => {
-
-            console.log('complete')
-          },
-        });
-    });
-
-    return promise;
-  }
 }
-

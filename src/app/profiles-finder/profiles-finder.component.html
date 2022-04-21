@@ -1,5 +1,38 @@
-<div class="container fluid">
+<div class="container">
     <div align="center" class="profiles" style="margin-top:5%">
-        <input type="search" placeholder="Find A Github User"><br><br> <button> <span style="font-size:large">Search</span> </button>
+        <input type="search"  #username placeholder="Find A Github User"><br><br>
+        <button (click)="findProfile(username.value)"> <span style="font-size:large">Search</span> </button>
+        <hr>
+               
+        <div *ngIf="githubUser" align="center" style="font-size:1.3rem;">
+            <p>Search Result for {{githubUser.login}} </p>
+            <hr>
+            <div class="row">
+            <div class="col-md-4">
+                <img [src]="githubUser.avatar_url" alt="Github AVatar" *ngIf="githubUser.avatar_url">
+            </div>
+            <div class="col-md-7">
+                <p class="heading">Identity</p>
+                <span *ngIf="githubUser.name"><span class="title">Name:</span> {{githubUser.name}}</span> &nbsp;&nbsp;
+    <span *ngIf="githubUser.login"><span class="title">User Name:</span> {{githubUser.login}}   <hr></span>
+  
+    
+    <span *ngIf="githubUser.bio"> <p class="heading">About</p><span class="title">Bio</span>: {{githubUser.bio}} <hr> </span>
+    
+    <span *ngIf="githubUser.followers"> <p class="heading">Statistics</p><span class="title">Followers:</span> {{githubUser.followers}}</span> <br>
+    <span *ngIf="githubUser.following"><span class="title">Following:</span> {{githubUser.following}}<hr></span>
+    <span *ngIf="githubUser.html_url"><a href="{{githubUser.html_url}}" target="_blank"><button class="link"> View On <i class="fa-brands fa-github" style="font-size:2rem;"></i></button></a><hr></span>
+
+            </div>
+            
+     </div>
+     <hr>
+     <span>
+        <p>Help us improve <a href="https://docs.google.com/forms/d/e/1FAIpQLSeR9QYjeNsdZ2GqnAE3vUbNTpjH8Zh3lRv3OgsK4pvsuc4nnQ/viewform" target="_blank">Repofinder?</a></p>
+
+     </span>
     </div>
 </div>
+
+</div>
+<div>My Project</div>

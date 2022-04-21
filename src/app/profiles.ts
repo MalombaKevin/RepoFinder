@@ -5,5 +5,7 @@ export interface Profiles {
     bio:string;
     followers:number;
     following:number;
+    html_url:string;
+    repos_url:string;
 
 }

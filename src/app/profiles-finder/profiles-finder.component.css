@@ -20,3 +20,24 @@ button{
     
 
 } */
+ img{
+     height:20rem;
+ }
+ .heading{
+     font-size:large;
+     color:black;
+     font-weight:900;
+    /* border-bottom: 5px red solid; */
+ }
+ .title{
+     color:blue;
+     font-weight:800;
+ }
+  button.link{
+     /* border:1 px solid yellow; */
+     /* border:none; */
+     border-radius: 5rem;
+     padding:0.3rem;
+     width:20%;
+     background-color: gold;
+ }

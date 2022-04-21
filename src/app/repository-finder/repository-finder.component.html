@@ -1,5 +1,43 @@
 <div class="container fluid">
     <div align="center" class="repos" style="margin-top:5%">
-        <input type="search" placeholder="Find A Github Repository"> <br><br> <button> <span style="font-size:large">Search</span> </button>
+        <input type="search" (keyup.enter)="searchRepos(repo.value)" #repo name="repo" id="repo"
+            placeholder="Find A Github Repository"> <br><br>
+        <button (click)="searchRepos(repo.value)"><span style="font-size:large">Search</span></button>
+    </div>
+    <hr>
+    <div style="margin-left:20%">
+
+        <div *ngFor="let repo of allRepos">
+            <!-- <p align="center">Search results</p> -->
+            <ul>
+                <ol>
+                    <div class="card" style="width:25rem">
+                        <div class="card-header" align="center">
+                            <p *ngIf="repo.name"><span style="color:blue">Name: </span>{{repo.name}}</p>
+                        </div>
+                        <div class="card-body" align="center">
+                            <span *ngIf="repo.description" ><span style="color:blue">Description: </span>{{repo.description}}</span>
+                        </div>
+                        <div class="card-footer" align="center">
+                            <span *ngIf="repo.html_url"><a href="{{repo.html_url}}" target="_blank"><button class="link"
+                                        align="marg"> Open In <i class="fa-brands fa-github"
+                                            style="font-size:2rem;"></i></button></a></span>
+
+
+                        </div>
+                    </div>
+                </ol>
+            </ul>
+        </div>
     </div>
 </div>
+
+
+
+<!-- <div *ngFor="let repo of allRepos">
+
+    <p>{{repo.name}}</p>
+   
+    <a href={{repo.html_url}}>See in github 2</a>
+
+</div> -->
