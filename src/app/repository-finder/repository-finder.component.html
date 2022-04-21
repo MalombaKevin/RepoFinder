@@ -11,14 +11,15 @@
             <!-- <p align="center">Search results</p> -->
             <ul>
                 <ol>
-                    <div class="card" style="width:25rem">
+                    <div class="card" style="width:30rem" *ngIf="repo">
                         <div class="card-header" align="center">
-                            <p *ngIf="repo.name"><span style="color:blue">Name: </span>{{repo.name}}</p>
+                            <p *ngIf="repo.name"><span style="color:blue">Repository Name: </span>{{repo.name}}</p>
                         </div>
-                        <div class="card-body" align="center">
-                            <span *ngIf="repo.description" ><span style="color:blue">Description: </span>{{repo.description}}</span>
+                        <div class="card-body" align="center" *ngIf="repo">
+                            <span *ngIf="repo.description" ><span style="color:blue">Description<br> </span>{{repo.description}}</span><br>
+                            <span *ngIf="repo.full_name" ><span style="color:blue">Owner<br>  </span>{{repo.full_name}}</span>
                         </div>
-                        <div class="card-footer" align="center">
+                        <div class="card-footer" align="center" *ngIf="repo">
                             <span *ngIf="repo.html_url"><a href="{{repo.html_url}}" target="_blank"><button class="link"
                                         align="marg"> Open In <i class="fa-brands fa-github"
                                             style="font-size:2rem;"></i></button></a></span>

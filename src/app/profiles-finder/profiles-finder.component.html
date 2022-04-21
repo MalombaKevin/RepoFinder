@@ -1,6 +1,6 @@
 <div class="container">
     <div align="center" class="profiles" style="margin-top:5%">
-        <input type="search"  #username placeholder="Find A Github User"><br><br>
+        <input type="search" (keyup.enter)="findProfile(username.value)" #username placeholder="Find A Github User"><br><br>
         <button (click)="findProfile(username.value)"> <span style="font-size:large">Search</span> </button>
         <hr>
                
@@ -35,4 +35,31 @@
 </div>
 
 </div>
-<!-- <div>My Project</div>git  -->
+<!-- <div *ngIf="githubUser">
+    <img [src]="githubUser.avatar_url" alt="Github AVatar" *ngIf="githubUser.avatar_url">
+    <p *ngIf="githubUser.name">Name: {{githubUser.name}}</p>
+    <p *ngIf="githubUser.login">Login: {{githubUser.login}}</p>
+    <p *ngIf="githubUser.bio">Bio: {{githubUser.bio}}</p>
+    <p *ngIf="githubUser.followers">Followers: {{githubUser.followers}}</p>
+    <p *ngIf="githubUser.following">Following: {{githubUser.following}}</p>
+    <!-- <p *ngIf="githubUser.following">Following: {{githubUser.following}}</p> -->
+<!-- </div> - -->
+
+<!-- <div class="card">
+    <div class="card-header">
+        <p *ngIf="githubUser.name">Name: {{githubUser.name}}</p>
+
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <img [src]="githubUser.avatar_url" alt="Github AVatar" *ngIf="githubUser.avatar_url">
+                
+            </div>
+        </div>
+
+    </div>
+    <div class="card-footer">
+
+    </div>
+</div> -->

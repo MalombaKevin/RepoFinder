@@ -24,7 +24,7 @@ export class RepositoryFinderComponent implements OnInit {
   }
   searchRepos(repoName: string) {
 
-    this.repoService.getAnyRepo(repoName).then(
+    this.repoService.findGuthubRepo(repoName).then(
       () => {
         this.allRepos = this.repoService.anyRepo
       },

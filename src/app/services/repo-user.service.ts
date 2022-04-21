@@ -38,11 +38,11 @@ export class RepoUserService {
     })
     return promise
   } 
-  getAnyRepo(name: string) {
+  findGuthubRepo(name: string) {
     console.log(`${environment.base_repo_url}${name}`)
     const promise = new Promise<void>((resolve, reject) => {
       this.http
-        //  this.http.get().subscribe({next:()=>{},error:()=>{}})
+      
         .get<Repo[]>(`${environment.base_repo_url}${name}`, {
           headers: {
             Authorization: `token ${environment.access_token}`,
