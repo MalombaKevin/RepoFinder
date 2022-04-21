@@ -17,7 +17,7 @@ export class RepoUserService {
     const promise = new Promise<void>((resolve,reject)=>{
            this.http.get<Profiles>(`${environment.base_url}/${username}`,{
              headers:{
-               Authorization: `token ${environment.access_token} `
+               Authorization: `token ${atob(environment.access_token)} `
              }
            }).subscribe({
              next:(result:any)=>{
@@ -41,11 +41,9 @@ export class RepoUserService {
   findGuthubRepo(name: string) {
     console.log(`${environment.base_repo_url}${name}`)
     const promise = new Promise<void>((resolve, reject) => {
-      this.http
-      
-        .get<Repo[]>(`${environment.base_repo_url}${name}`, {
+      this.http.get<Repo[]>(`${environment.base_repo_url}${name}`, {
           headers: {
-            Authorization: `token ${environment.access_token}`,
+            Authorization: `token ${atob(environment.access_token)}`,
           },
         })
         .subscribe({
